@@ -1,7 +1,3 @@
 # Consul-template configuration
 
-Dockfile and template file to auto-generated nginx config file from Consul.# Consul-template configuration
-
-Dockfile and template file to auto-generated nginx config file from Consul.# Consul-template configuration
-
-Dockfile and template file to auto-generated nginx config file from Consul.
+Docker image and accompanying consul-template file to auto-generate nginx config from Consul.
