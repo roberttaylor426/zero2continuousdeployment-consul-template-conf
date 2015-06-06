@@ -1,0 +1,8 @@
+server {
+    listen 80 default_server;
+{{range services}}{{if not (.Name | regexMatch "consul-([0-9]+)")}}{{$name := .Name}}{{range service .Name}}{{$address := .Address}}{{$port := .Port}}{{range .Tags}}
+    location /{{$name}}/{{.}}/ {
+        proxy_pass http://{{$address}}:{{$port}}/;
+    }{{end}}{{end}}{{end}}{{end}}
+}
+
